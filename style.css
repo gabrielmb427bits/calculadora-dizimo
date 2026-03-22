@@ -1,0 +1,86 @@
+/* Estilo para o corpo da página - Mantenha como está */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('fundo-biblia.jpg'); /* Nome correto do seu arquivo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 100vh;       /* Garante que o body ocupe a altura toda */
+}
+
+/* NOVO ESTILO: A "caixa" centralizada */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Branco com 90% de opacidade (semi-transparente) */
+    padding: 30px;
+    border-radius: 15px; /* Bordas arredondadas suaves */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    text-align: center;
+    max-width: 400px; /* Largura máxima da caixa */
+    width: 90%;       /* Para ser responsivo em celulares */
+}
+
+/* Melhore o estilo dos textos e elementos dentro da caixa */
+h1 {
+    color: #333;
+    margin-top: 0;
+}
+
+.versiculo {
+    font-style: italic;
+    font-size: 0.9rem; /* Um pouco menor que o texto padrão */
+    color: #666;       /* Cinza para não cansar a vista */
+    margin-bottom: 20px;
+    line-height: 1.4;  /* Espaçamento entre as linhas do versículo */
+    border-bottom: 1px solid #eee; /* Uma linha bem fininha abaixo para separar */
+    padding-bottom: 15px;
+}
+
+.versiculo strong {
+    display: block;    /* Faz a referência (Malaquias) ficar na linha de baixo */
+    margin-top: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+p {
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 80%; /* Ocupa a maior parte da caixa */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Estilo para o resultado - Agora em verde */
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #2e7d32; /* Um verde bonito */
+    white-space: pre-line; /* IMPORTANTE para pular linha */
+    font-size: 1.1rem;
+}
+}

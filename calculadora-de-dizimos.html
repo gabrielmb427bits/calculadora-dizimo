@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-BR"> <!--ELEMENTO e ATRIBUTO-->
+<!-- Início do documento HTML com idioma definido como português do Brasil -->
+
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura o viewport para garantir que o site seja responsivo em dispositivos móveis -->
+    <title>Calculadora de Dízimo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Define o título da página, que aparece na aba do navegador -->
+</head>
+
+<>
+
+  <div class="container"> <h1>Calculadora de Dízimo</h1>
+
+    <p class="versiculo">"Trazei todos os dízimos à casa do tesouro..." <br> <strong>Malaquias 3:10</strong></p>
+
+    <p>Digite o montante:</p>
+    <input type="number" id="montante" placeholder="Montante">
+    <button onclick="calcularDizimo()">Calcular Dízimo</button>
+    <p id="resultado"></p>
+
+  </div> <script>
+    // ... seu código javascript continua aqui ...
+    function calcularDizimo() {
+        var montante = document.getElementById('montante').value;
+        var dizimo = montante * 0.10;
+        // O \n faz o texto pular para a linha de baixo
+        document.getElementById('resultado').innerText = 'O dízimo é: R$ ' + dizimo.toFixed(2) + '\nDeus abençoe!';
+    }
+  </script>
+</body>
+</html>
+</script>
+</html>
