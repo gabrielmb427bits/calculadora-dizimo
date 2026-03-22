@@ -30,11 +30,27 @@
   </div> <script>
     // ... seu código javascript continua aqui ...
     function calcularDizimo() {
-        var montante = document.getElementById('montante').value;
-        var dizimo = montante * 0.10;
-        // O \n faz o texto pular para a linha de baixo
-        document.getElementById('resultado').innerText = 'O dízimo é: R$ ' + dizimo.toFixed(2) + '\nDeus abençoe!';
+    // 1. Pegamos o valor e trocamos a vírgula por ponto para o sistema entender
+    let valorDigitado = document.getElementById('montante').value.replace(',', '.');
+    
+    // 2. Convertemos para número
+    let montante = parseFloat(valorDigitado);
+
+    // 3. Verificamos se é um número válido
+    if (isNaN(montante) || montante <= 0) {
+        document.getElementById('resultado').innerText = "Por favor, digite um valor válido.";
+        return;
     }
+
+    // 4. Cálculo exato dos 10%
+    let dizimo = montante * 0.10;
+
+    // 5. Formatação para Real Brasileiro (R$ 0,00)
+    let valorFormatado = dizimo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    // 6. Exibimos o resultado
+    document.getElementById('resultado').innerText = 'O dízimo é: ' + valorFormatado + '\nDeus abençoe!';
+}
   </script>
 </body>
 </html>
